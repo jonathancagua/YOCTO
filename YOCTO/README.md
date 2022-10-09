@@ -255,9 +255,28 @@ Las instrucciones completas de uso se pueden ver ejecutando el comando sin espec
 Dentro de la carpeta construdia **build_folder**
 ejecutar el siguiente comando:
 
-    runqemu qemuarm
+    $ runqemu qemuarm
 
-## Exit QEMU
+## Nographic
+
+Puedes ejecutar QEMU sin la ventana gráfica añadiendo nographic a la línea de comandos
+
+    $ runqemu qemuarm nographic
+
+## Para añadir un paquete concreto en su sistema de archivos raíz.
+
+Abra su archivo local.conf y añada el nombre de la receta a continuación
+
+    IMAGE_INSTALL += "nombre-receta"
+
+Por ejemplo, 
+
+    IMAGE_INSTALL += "usbutils" para lsusb
+o 
+
+    IMAGE_INSTALL_append = " usbutils"
+
+### Exit QEMU
 
 Salga de QEMU haciendo clic en el icono de apagado o escribiendo Ctrl-C en la ventana de transcripción de QEMU.
 
