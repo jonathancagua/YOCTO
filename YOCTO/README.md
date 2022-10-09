@@ -9,13 +9,12 @@ Creado por: [Jonathan, Cagua](https://github.com/jonathancagua)<br>
 
 # Tabla de contenidos 💡
 
-- [Instalacion](#instalacion)
-- [Introducción](#introducción)
-- [Programas](#programas)
-- [Instrucciones](#instrucciones)
-- [Licencia](#licencia)
+- [Instalación](#instalación)
+- [Configuración](#configuración)
+- [Bitbake](#bitbake)
+- [Qemu](#qemu)
 
-# Instalacion
+# Instalación
 ## Repositorio poky
 Se uitliza la version 3.4 de yocto con el nombre **Honister**. Para comenzar, debes clonar el repositorio Poky:
 
@@ -33,7 +32,7 @@ Se debe clonar los siguientes repositorios dentro de ***poky-honister***:
     git clone -b honister git://git.openembedded.org/meta-openembedded
     git clone -b honister https://github.com/meta-qt5/meta-qt5.git
 
-# Configuracion
+# Configuración
 Se debe salir de la carpeta **poky-honister** para generar los archivos de compilacion fuera de esta carpeta:
 
     cd ..
