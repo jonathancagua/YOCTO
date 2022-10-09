@@ -30,7 +30,7 @@ Creado por: [Jonathan Cagua](https://github.com/jonathancagua)<br>
 
 Los paquetes y la instalación de los mismos varían en función de su sistema de desarrollo.
 
-(*) Instale los paquetes necesarios para que Yocto funcione desde
+(*) Instala los paquetes necesarios para que Yocto funcione desde
         https://www.yoctoproject.org/docs/latest/ref-manual/ref-manual.html#ubuntu-packages
 
 Ejecutar en consola el siguiente comando:
@@ -193,22 +193,22 @@ Cambiar la siguiente línea:
     # This sets the default machine to be qemux86-64 if no other machine is selected:
     MACHINE ??= "qemux86-64"
 
-Dependiendo de la raspberry que quieras utilizar (raspberrypi0, raspberrypi0w, raspberrypi3, raspberrypi3-64, raspberrypi4, raspberrypi4-64)
+Dependiendo de la raspberry que se quiera utilizar (raspberrypi0, raspberrypi0w, raspberrypi3, raspberrypi3-64, raspberrypi4, raspberrypi4-64)
     
     # This sets the default machine to be qemux86-64 if no other machine is selected:
     MACHINE ??= "raspberrypi4-64"
 
-Añade las siguientes líneas al final:
+Añadir las siguientes líneas al final:
 
     IMAGE_FSTYPES = "ext4.xz rpi-sdimg"
     SDIMG_ROOTFS_TYPE = "ext4.xz"
 
 # Bitbake
-Dentro de la carpeta **build_folder** ejecuta el siguiente comando para construir una imagen minima.
+Dentro de la carpeta **build_folder** ejecutar el siguiente comando para construir una imagen minima.
 
     bitbake core-image-minimal
 
-En la **[documentación de Yocto](https://docs.yoctoproject.org/ref-manual/images.html)**  encontrarás una breve descripción de las descripciones de imágenes disponibles.
+En la **[documentación de Yocto](https://docs.yoctoproject.org/ref-manual/images.html)**  se encontrará una breve descripción de las descripciones de imágenes disponibles.
 
 Por ejemplo:
 
@@ -259,13 +259,13 @@ ejecutar el siguiente comando:
 
 ## Nographic
 
-Puedes ejecutar QEMU sin la ventana gráfica añadiendo nographic a la línea de comandos
+Es posible ejecutar QEMU sin la ventana gráfica añadiendo nographic a la línea de comandos
 
     $ runqemu qemuarm nographic
 
 ## Para añadir un paquete concreto en su sistema de archivos raíz.
 
-Abra su archivo local.conf y añada el nombre de la receta a continuación
+Abrir su archivo local.conf y añada el nombre de la receta a continuación
 
     IMAGE_INSTALL += "nombre-receta"
 
@@ -278,7 +278,7 @@ o
 
 ### Exit QEMU
 
-Salga de QEMU haciendo clic en el icono de apagado o escribiendo Ctrl-C en la ventana de transcripción de QEMU.
+Salir de QEMU haciendo click en el icono de apagado o escribiendo Ctrl-C en la ventana de transcripción de QEMU.
 
 
 
