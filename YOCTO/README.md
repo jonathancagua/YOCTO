@@ -3,7 +3,7 @@
 # YOCTO
 
 Resumen de trabajo final de ***Sistema operativo II***.<br>
-Creado por: [Jonathan, Cagua](https://github.com/jonathancagua)<br>
+Creado por: [Jonathan Cagua](https://github.com/jonathancagua)<br>
 
 </div>
 
