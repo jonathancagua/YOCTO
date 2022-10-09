@@ -149,46 +149,46 @@ Poky incluye
 
 # Instalación
 ## Repositorio poky
-Se utiliza la versión 3.4 de yocto con el nombre **Honister**. Para comenzar, debes clonar el repositorio Poky:
+Usar la versión 3.4 de yocto con el nombre **Honister**. Clonar el repositorio Poky:
 
     git clone -b honister git://git.yoctoproject.org/poky poky-honister
 
-Siguiente paso es ingresar a la carpeta creada y hacer pull del repositorio para bajar cambios:
+Ingresar a la carpeta creada y hacer pull del repositorio para bajar cambios:
 
     cd poky-honister
     git pull --all --prune
 
 ## Capas meta adicionales
-Se debe clonar los siguientes repositorios dentro de ***poky-honister***:
+Clonar los repositorios dentro de ***poky-honister***:
 
     git clone -b honister git://git.yoctoproject.org/meta-raspberrypi
     git clone -b honister git://git.openembedded.org/meta-openembedded
     git clone -b honister https://github.com/meta-qt5/meta-qt5.git
 
 # Configuración
-Se debe salir de la carpeta **poky-honister** para generar los archivos de compilación fuera de esta carpeta:
+Salir de la carpeta **poky-honister** para generar los archivos de compilación fuera de esta carpeta:
  
     cd ..
     source poky-honister/oe-init-build-env build_folder
  
-Se crea un nuevo directorio **build_folder** el cual llevaría el nombre dependiendo de qué compilación deseas realizar. Dentro de la carpeta se crea un directorio con el nombre de  **conf** con los siguientes archivos:
+Se crea un nuevo directorio **build_folder**. Dentro de la carpeta se crea un directorio con el nombre de  **conf** con los siguientes archivos:
 - bblayers.conf
 - local.conf
 - templateconf.cfg
 
- ## Editando local.conf para simulación con qemu
- Cambiar la siguiente línea:
+## Editando local.conf para simulación con qemu
+Cambiar la siguiente línea:
 
     # This sets the default machine to be qemux86-64 if no other machine is selected:
     MACHINE ??= "qemux86-64"
 
-Seleccionamos la maquina para ejecutar yocto con qemu
+Seleccionar la maquina para ejecutar yocto con qemu
     
     # This sets the default machine to be qemux86-64 if no other machine is selected:
     MACHINE ??= "qemuarm"
     
- ## Editando local.conf para raspberry
- Cambiar la siguiente línea:
+## Editando local.conf para raspberry
+Cambiar la siguiente línea:
 
     # This sets the default machine to be qemux86-64 if no other machine is selected:
     MACHINE ??= "qemux86-64"
@@ -204,7 +204,7 @@ Añade las siguientes líneas al final:
     SDIMG_ROOTFS_TYPE = "ext4.xz"
 
 # Bitbake
-Dentro de la carpeta **build_folder** ejecutar el siguiente comando para construir una imagen minima.
+Dentro de la carpeta **build_folder** ejecuta el siguiente comando para construir una imagen minima.
 
     bitbake core-image-minimal
 
