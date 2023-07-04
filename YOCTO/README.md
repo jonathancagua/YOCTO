@@ -331,6 +331,7 @@ Sigue los pasos a continuación para agregar el módulo de kernel:
 4. Abre el archivo `meta-raspberrypi/conf/layer.conf` y agrega la siguiente línea:
     ```
     MACHINE_EXTRA_RDEPENDS += "kernel-module-hello"
+    KERNEL_MODULE_AUTOLOAD += "hello"
     ```
 
 5. Para obtener el MD5 del archivo `COPYING`, ejecuta el siguiente comando:
