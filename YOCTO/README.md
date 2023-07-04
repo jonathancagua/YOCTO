@@ -338,7 +338,10 @@ Sigue los pasos a continuación para agregar el módulo de kernel:
     $ md5sum COPYING
     ```
 
-
+6. Ejecutar desde el miniPC
+   ```
+   $ insmod /lib/modules/5.4.209-yocto-standard/extra/hello.ko
+   ```
 
 
 
