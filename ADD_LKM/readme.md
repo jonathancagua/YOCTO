@@ -40,3 +40,23 @@ Sigue los pasos a continuación para agregar el módulo de kernel:
     S = "${WORKDIR}/git"
     
     RPROVIDES_${PN} += "kernel-module-hello"
+
+    ```
+
+
+
+4. Abre el archivo `meta-raspberrypi/conf/layer.conf` y agrega la siguiente línea:
+    ```
+    MACHINE_EXTRA_RDEPENDS += "kernel-module-hello"
+    KERNEL_MODULE_AUTOLOAD += "hello"
+    ```
+
+5. Para obtener el MD5 del archivo `COPYING`, ejecuta el siguiente comando:
+    ```
+    $ md5sum COPYING
+    ```
+
+6. Ejecutar desde el miniPC
+   ```
+   $ insmod /lib/modules/5.4.209-yocto-standard/extra/hello.ko
+   ```
