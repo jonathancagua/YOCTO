@@ -7,10 +7,6 @@ SRC_URI = "file://userprog.c \
 
 S = "${WORKDIR}"
 
-do_compile() {
-    make
-}	
-
 do_install() {
     install -d ${D}${bindir}
     install -m 0755 userprog ${D}${bindir}
