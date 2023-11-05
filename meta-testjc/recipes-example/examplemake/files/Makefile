@@ -9,7 +9,11 @@ TARGET = userprog
 all: $(TARGET)
 
 $(TARGET): $(TARGET).c
-	${CC} $(CFLAGS) -o $(TARGET) $(LDFLAGS)  $(TARGET).c
+	${CC} $(CFLAGS) -o $(TARGET)  $(TARGET).c $(LDFLAGS)
 
-clean:
-	rm  -f $(TARGET)
+install:
+	install -d $(DESTDIR)
+	install -m 0755 $(TARGET) $(DESTDIR)
+
+uninstall:
+	rm $(DESTDIR)$(TARGET)

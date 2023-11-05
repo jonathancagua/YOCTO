@@ -6,8 +6,8 @@ SRC_URI = "file://userprog.c \
            file://Makefile"
 
 S = "${WORKDIR}"
-
+EXTRA_OEMAKE += "V=1"
+CLEANBROKEN = "1"
 do_install() {
-    install -d ${D}${bindir}
-    install -m 0755 userprog ${D}${bindir}
+    oe_runmake install DESTDIR=${D}/usr/bin/
 }
