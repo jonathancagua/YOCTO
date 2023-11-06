@@ -15,6 +15,11 @@ do_compile() {
 do_install() {
     install -d ${D}${bindir}
     install -m 0755 userprogr ${D}${bindir}
+# instala en directorios generales
+#IMAGE_INSTALL:append = " examplec examplec-doc"
     install -d ${D}${docdir}
     install -m 0644 Readme.txt ${D}${docdir}
 }
+#FILES_${PN} += "{bindir}/userprogr"
+#FILES_${PN}-dbg += "{bindir}/userprogr ${includedir}/Readme.txt"
+#PACKAGES = "${PN}-dbg ${PN}"
